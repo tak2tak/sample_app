@@ -36,6 +36,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'bootstrap-sass', '3.3.7'
+gem 'jquery-rails'
 
 group :production do
   gem 'pg', '0.20.0'
