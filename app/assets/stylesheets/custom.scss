@@ -197,4 +197,14 @@ input {
   .form-control {
     color: $state-danger-text;
   }
+
+  .checkbox {
+    maring-top: -10px;
+    margin-bottom: 10px;
+    span {
+      margin-left: 20px;
+      font-weiht: normal;
+    }
+  }
+  
 }
