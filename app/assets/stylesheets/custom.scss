@@ -198,13 +198,24 @@ input {
     color: $state-danger-text;
   }
 
-  .checkbox {
-    maring-top: -10px;
-    margin-bottom: 10px;
-    span {
-      margin-left: 20px;
-      font-weiht: normal;
-    }
+.checkbox {
+  maring-top: -10px;
+  margin-bottom: 10px;
+  span {
+    margin-left: 20px;
+    font-weiht: normal;
   }
+}
   
+  /* Users index */
+  
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
 }
