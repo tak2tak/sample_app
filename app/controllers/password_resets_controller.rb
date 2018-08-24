@@ -56,11 +56,6 @@ class PasswordResetsController < ApplicationController
   end
 
   # beforeフィルタ
-
-  def get_user
-    @user = User.find_by(email: params[:email])
-  end
-
   def get_user
   @user = User.find_by(email: params[:email])
   end
@@ -72,4 +67,12 @@ class PasswordResetsController < ApplicationController
       redirect_to root_url
     end
   end
+  
+  # トークンが期限切れかどうか確認する
+    def check_expiration
+      if @user.password_reset_expired?
+        flash[:danger] = "Password reset has expired."
+        redirect_to new_password_reset_url
+      end
+    end
 end
